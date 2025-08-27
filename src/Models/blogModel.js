@@ -1,5 +1,6 @@
+
 const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
+
 const blogSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -13,12 +14,12 @@ const blogSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-    createdAt: {
-        type: Date,
-        default: Date.now,
-    },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
-  const Blog = mongoose.model("Blog", blogSchema);
+const Blog = mongoose.model("Blog", blogSchema);
 
-  module.exports = Blog;
+module.exports = Blog;
